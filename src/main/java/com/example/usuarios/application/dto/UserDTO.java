@@ -1,37 +1,19 @@
-package com.example.usuarios.domain.entity;
+package com.example.usuarios.application.dto;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 
-import java.util.List;
-import java.util.Set;
+import java.io.Serializable;
 
-@Entity
-@Table(name = "Users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "userSequence")
-    @Column(name = "Id")
+public class UserDTO implements Serializable {
     private Long id;
-
-    @Column(name = "Nombre", length = 150, nullable = false)
-    @Size(min = 3, max = 150)
     private String name;
-
-    @Column(name = "Apellidos", length = 200, nullable = false)
     private String apellidos;
-
-    @Column(name = "Email", length = 200, nullable = false)
     private String email;
-
-    @Column(name = "Rol", nullable = false)
     private String roles;
-
-    @Column(name = "Acción")
-    @Lob()
     private byte[] photo;
 
-    public User() {
+    public UserDTO() {
     }
 
     public Long getId() {
