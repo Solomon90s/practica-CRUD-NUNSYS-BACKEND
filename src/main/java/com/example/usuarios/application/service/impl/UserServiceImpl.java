@@ -46,6 +46,5 @@ public class UserServiceImpl implements UserService {
     @Override
     public void deleteUser(Long idUser) {
         this.persistence.deleteUser(idUser);
-
     }
 }

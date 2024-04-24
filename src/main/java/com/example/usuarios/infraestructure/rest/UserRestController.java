@@ -51,4 +51,11 @@ public class UserRestController {
         userDTO = this.userService.saveUser(userDTO);
         return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
+
+    @CrossOrigin
+    @DeleteMapping(value = "/users/{userId}")
+    ResponseEntity<List<UserDTO>> deleteUserById(@PathVariable Long userId) {
+        this.userService.deleteUser(userId);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 }
