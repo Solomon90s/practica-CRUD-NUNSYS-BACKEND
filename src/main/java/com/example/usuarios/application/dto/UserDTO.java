@@ -11,7 +11,7 @@ public class UserDTO implements Serializable {
     private String apellidos;
     private String email;
     private String roles;
-    private byte[] photo;
+
 
     public UserDTO() {
     }
@@ -56,11 +56,4 @@ public class UserDTO implements Serializable {
         this.roles = roles;
     }
 
-    public byte[] getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(byte[] photo) {
-        this.photo = photo;
-    }
 }

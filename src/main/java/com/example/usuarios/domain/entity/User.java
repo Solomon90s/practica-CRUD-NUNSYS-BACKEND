@@ -27,9 +27,6 @@ public class User {
     @Column(name = "Rol", nullable = false)
     private String roles;
 
-    @Column(name = "Acción")
-    @Lob()
-    private byte[] photo;
 
     public User() {
     }
@@ -74,11 +71,4 @@ public class User {
         this.roles = roles;
     }
 
-    public byte[] getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(byte[] photo) {
-        this.photo = photo;
-    }
 }
