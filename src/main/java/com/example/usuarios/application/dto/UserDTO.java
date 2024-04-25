@@ -1,7 +1,5 @@
 package com.example.usuarios.application.dto;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 
 import java.io.Serializable;
 

@@ -1,10 +1,6 @@
 package com.example.usuarios.domain.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
-
-import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "Users")
@@ -14,16 +10,13 @@ public class User {
     @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Nombre", length = 150, nullable = false)
-    @Size(min = 3, max = 150)
+    @Column(name = "Nombre" ,nullable = false)
     private String name;
 
     @Column(name = "Apellidos", length = 200, nullable = false)
-    @Size(min = 5, max = 200)
     private String apellidos;
 
     @Column(name = "Email", length = 50, nullable = false)
-    @Size(min =10, max = 50)
     private String email;
 
     @Column(name = "Rol", nullable = false)
