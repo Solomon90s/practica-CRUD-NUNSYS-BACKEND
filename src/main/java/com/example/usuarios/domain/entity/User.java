@@ -19,9 +19,11 @@ public class User {
     private String name;
 
     @Column(name = "Apellidos", length = 200, nullable = false)
+    @Size(min = 5, max = 200)
     private String apellidos;
 
-    @Column(name = "Email", length = 200, nullable = false)
+    @Column(name = "Email", length = 50, nullable = false)
+    @Size(min =10, max = 50)
     private String email;
 
     @Column(name = "Rol", nullable = false)
