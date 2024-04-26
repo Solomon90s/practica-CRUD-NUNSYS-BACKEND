@@ -123,3 +123,15 @@ The connection was not closed by the application and is garbage collected [90018
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
 	... 47 more
+2024-04-26 08:35:04.053063+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+select u1_0.id,u1_0.apellidos,u1_0.email,u1_0.nombre,u1_0.rol from users u1_0 [42104-224]
+2024-04-26 08:35:04.209061+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+select u1_0.id,u1_0.apellidos,u1_0.email,u1_0.nombre,u1_0.rol from users u1_0 [42104-224]
+2024-04-26 08:35:04.222059+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+select u1_0.id,u1_0.apellidos,u1_0.email,u1_0.nombre,u1_0.rol from users u1_0 [42104-224]
+2024-04-26 08:35:04.234060+02:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USERS" not found (this database is empty); SQL statement:
+select u1_0.id,u1_0.apellidos,u1_0.email,u1_0.nombre,u1_0.rol from users u1_0 [42104-224]
