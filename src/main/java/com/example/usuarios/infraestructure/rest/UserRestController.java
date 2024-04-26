@@ -20,14 +20,14 @@ public class UserRestController {
         this.userService = userService;
     }
 
-    @CrossOrigin
+
     @GetMapping(value = "/users", produces = "application/json")
     ResponseEntity<List<UserDTO>> getAllUsers() {
         List<UserDTO> users = this.userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
 
-    @CrossOrigin
+
     @GetMapping(value = "/users/{userId}", produces = "application/json")
     public ResponseEntity<UserDTO> getUserById(@PathVariable Long userId) {
         Optional<UserDTO> user = userService.getUserById(userId);
@@ -38,21 +38,21 @@ public class UserRestController {
 
     }
 
-    @CrossOrigin
+
     @PostMapping(value = "/users", produces = "application/json", consumes = "application/json")
     ResponseEntity<UserDTO> insertarUsuario(@RequestBody UserDTO userDTO) {
         userDTO = this.userService.saveUser(userDTO);
         return new ResponseEntity<>(userDTO, HttpStatus.CREATED);
     }
 
-    @CrossOrigin
+
     @PatchMapping(value = "/users", produces = "application/json", consumes = "application/json")
     ResponseEntity<UserDTO> actualizarUsuario(@RequestBody UserDTO userDTO) {
         userDTO = this.userService.saveUser(userDTO);
         return new ResponseEntity<>(userDTO, HttpStatus.OK);
     }
 
-    @CrossOrigin
+
     @DeleteMapping(value = "/users/{userId}")
     ResponseEntity<List<UserDTO>> deleteUserById(@PathVariable Long userId) {
         this.userService.deleteUser(userId);
